@@ -1,5 +1,8 @@
 Pra passar pra mp4:
 ffmpeg -i pendulo_madeira.mkv -c copy pendulo_madeira.mp4
+	Dos PNG:
+	ffmpeg -r 24 -i 0%03d.png -c:v libx264 -r 24 -pix_fmt yuv420p out.mp4
+
 
 pra fazer um gif:
 ffmpeg -y -f image2 -framerate 24 -i 00%02d.png -vf scale=500x500 video_grande.mp4
